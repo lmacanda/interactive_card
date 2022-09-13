@@ -38,20 +38,29 @@
                 <div class="input-box">
                     <span><p>card number</p></span>
                     <input type="text" maxlength="16" class="card-number-input" placeholder="e.g. 1234 5678 9123 0000">
+                    <p id="card-num-error"></p>
                 </div>
                 <div class="flexbox">
                 <div class="input-box">
                     <span><p>exp.date(mm/yy)</p></span>
                     <span><input type="text" maxlength="2" class="month-input" placeholder="MM"></span>
                     <span><input type="text" maxlength="2" class="year-input" placeholder="YY"></span>
+                    <p id="expiry-error"></p>
                 </div>
                     <div class="input-box">
                         <span><p>cvc</p></span>
                         <input type="text" maxlength="3" class="cvc-input" placeholder="e.g. 123">
+                        <p id="error-cvc"></p>          
                     </div>
                     </div>
                     <button type="submit" value="Confirm" class="submit-btn">Confirm</button>
             </form>
+            <div id="thank-you" class="thank-you hidden">
+              <img src="images/icon-complete.svg" alt="complete" />
+              <h2 id="thank-you-header">Thank You!</h2>
+              <p>We've added your card details</p>
+              <button id="continue">Continue</button>
+            </div>
           </div>
         </div>
     </div>

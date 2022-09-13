@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   height: 100vh;
+  max-width: 1440px;
 }
 
 .container > .main-container {
@@ -58,6 +59,7 @@ img.card {
   transform: translate(-50%, -50%);
   z-index: 9;
   width: 37vmax;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
 .back-card {
@@ -66,6 +68,7 @@ img.card {
   left: 29vmax;
   transform: translate(-50%, -50%);
   width: 37vmax;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
 img.icon {
@@ -107,7 +110,11 @@ input.cvc-input {
   width: 140px;
 }
 
-button.submit-btn {
+input ::placeholder {
+  color: var(--clr-neutral-100);
+}
+
+button {
   padding: 15px;
   width: -webkit-fill-available;
   margin-top: 25px;
@@ -117,7 +124,7 @@ button.submit-btn {
   color: var(--clr-neutral-white);
 }
 
-button.submit-btn:hover {
+button:hover {
   background-color: hsl(278, 68%, 11%, 0.8);
 }
 
@@ -131,6 +138,15 @@ input {
   border: 2px solid var(--clr-neutral-100);
   border-radius: 6px;
   padding: 15px;
+}
+
+input:focus {
+  border: 3px solid;
+  border-image: linear-gradient(hsl(249, 99%, 64%) 10%, hsl(278, 94%, 30%)) 1;
+}
+
+input:invalid {
+  border: 1px solid hsl(0, 100%, 66%);
 }
 
 span > p {
@@ -175,6 +191,37 @@ p {
   top: 9vmax;
   left: 29vmax;
   font-size: 10px;
+}
+
+/* THANK YOU SECTION */
+.thank-you {
+  position: absolute;
+  right: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.thank-you img {
+  width: 70px;
+}
+.thank-you h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.thank-you p {
+  font-weight: 500;
+  color: hsl(279, 6%, 55%);
+}
+button#continue {
+  margin-top: 25px;
+  width: 350px;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 600px) {
