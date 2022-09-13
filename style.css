@@ -71,22 +71,84 @@ img.card {
 img.icon {
   position: absolute;
   top: 22%;
-  left: 18%;
+  left: 15%;
   transform: translate(-50%, -50%);
   z-index: 19;
-  width: 8vmax;
+  width: 8vh;
 }
 
 .form-container {
-  max-width: 380px;
+  padding: 60px 20px 20px 20px;
+}
+
+.form-container .flexbox {
   display: flex;
-  align-content: center;
-  justify-content: center;
+  gap: 15px;
+  justify-content: flex-start;
 }
 
 form {
-  width: fit-content;
-  padding: 20px 20px 20px 20px;
+  padding: 60px 20px 20px 20px;
+  display: inline-block;
+  margin: 0 auto;
+  width: 320px;
+}
+
+input.card-holder-input,
+.card-number-input {
+  width: -webkit-fill-available;
+}
+
+input.month-input {
+  width: 80px;
+}
+
+input.year-input {
+  width: 80px;
+}
+
+input.cvc-input {
+  width: 100px;
+}
+
+span.cvc-input {
+  padding-right: 5px;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+.card-number-display,
+.card-holder-display,
+.exp-display,
+.cvc-display {
+  position: absolute;
+  color: var(--clr-neutral-100);
+}
+
+.card-number-display {
+  top: 10vmax;
+  left: 3vmax;
+  font-size: 17px;
+}
+
+.card-holder-display {
+  top: 16vmax;
+  left: 3vmax;
+  font-size: 10px;
+}
+
+.exp-display {
+  top: 16vmax;
+  left: 30vmax;
+  font-size: 10px;
+}
+
+.cvc-display {
+  top: 9vmax;
+  left: 29vmax;
+  font-size: 10px;
 }
 
 @media screen and (min-width: 600px) {
@@ -98,13 +160,51 @@ form {
     top: 35%;
     left: 80%;
     transform: translate(-50%, -50%);
-    width: 30vmax;
+    width: 30vw;
   }
 
   .back-card {
     top: 67%;
     left: 105%;
     transform: translate(-50%, -50%);
-    width: 30vmax;
+    width: 30vw;
+  }
+
+  .card-number-display {
+    top: 9vmax;
+    left: 2vmax;
+    font-size: 17px;
+    letter-spacing: 4px;
+  }
+
+  .card-holder-display {
+    top: 13vmax;
+    left: 2vmax;
+    font-size: 13px;
+  }
+
+  .exp-display {
+    top: 13vmax;
+    left: 25vmax;
+    font-size: 13px;
+  }
+
+  .cvc-display {
+    top: 7vmax;
+    left: 24vmax;
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card-number-display {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .card-number-display {
+    font-size: 28px;
+    letter-spacing: 5px;
   }
 }
