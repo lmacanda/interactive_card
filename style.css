@@ -60,6 +60,7 @@ img.card {
   z-index: 9;
   width: 37vmax;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  border-radius: 8px;
 }
 
 .back-card {
@@ -69,6 +70,7 @@ img.card {
   transform: translate(-50%, -50%);
   width: 37vmax;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  border-radius: 8px;
 }
 
 img.icon {
@@ -292,5 +294,9 @@ button#continue {
 
   .form-container {
     padding-top: 215px;
+  }
+
+  .cvc-display {
+    top: 7.5vmax;
   }
 }
