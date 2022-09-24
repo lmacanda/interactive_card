@@ -16,41 +16,42 @@
         <div class="main-container">
             <div class="front-card">
       <img class="card" src="images/bg-card-front.png" alt="card-front">
-      <p class="card-number-display">0000 0000 0000 0000</p>
-      <p class="card-holder-display">Jane Appleseed</p>
-      <p class="exp-display">00/00</p>
+      <p class="card-number-display" id="display-number">0000 0000 0000 0000</p>
+      <p class="card-holder-display" id="display-name">Jane Appleseed</p>
+      <p class="card-month-display"id="display-month">00</p><p class="card-slash-display">/</p><p class="card-year-display"id="display-year">00</p>
       <div>
         <img class="icon" src="images/card-logo.svg" alt="icon">
       </div>
     </div>
     <div class="back-card">
       <img class="card" src="images/bg-card-back.png" alt="card-back">
-      <p class="cvc-display">000</p>
+      <p class="cvc-display" id="display-cvc">000</p>
     </div>
         </div>
         <div class="card-form-container">
           <div class="form-container">
-            <form action="">
+            <form id="form" name="form">
                 <div class="input-box">
-                    <span><p>cardholder name</p></span>
-                    <input type="text" class="card-holder-input" placeholder="e.g. Jane Appleseed">
+                    <label>cardholder name</label>
+                    <input type="text" class="card-holder-input" id="card-name" placeholder="e.g. Jane Appleseed" oninput="displayName()">
+                    <p class="error" id="name-error"></p>
                 </div>
                 <div class="input-box">
-                    <span><p>card number</p></span>
-                    <input type="text" maxlength="16" class="card-number-input" placeholder="e.g. 1234 5678 9123 0000">
-                    <p id="card-num-error"></p>
+                    <label>card number</label>
+                    <input type="text" class="card-number-input" id="card-number" placeholder="e.g. 1234 5678 9123 0000" oninput="displayNumber()">
+                    <p class="error" id="num-error"></p>
                 </div>
                 <div class="flexbox">
                 <div class="input-box">
-                    <span><p>exp.date(mm/yy)</p></span>
-                    <span><input type="text" maxlength="2" class="month-input" placeholder="MM"></span>
-                    <span><input type="text" maxlength="2" class="year-input" placeholder="YY"></span>
-                    <p id="expiry-error"></p>
+                    <label>exp.date(mm/yy)</label>
+                    <span><input type="text" class="month-input" id="card-month" placeholder="MM" name="month" oninput="displayMonth()"></span>
+                    <span><input type="text" class="year-input" id="card-year" placeholder="YY" name="year" oninput="displayYear()"></span>
+                    <p class="error" id="expiry-error"></p>
                 </div>
                     <div class="input-box">
-                        <span><p>cvc</p></span>
-                        <input type="text" maxlength="3" class="cvc-input" placeholder="e.g. 123">
-                        <p id="error-cvc"></p>          
+                        <label>cvc</label>
+                        <input type="text" class="cvc-input" id="card-cvc" placeholder="e.g. 123" name="cvc" oninput="displayCVC()">
+                        <p class="error" id="error-cvc"></p>          
                     </div>
                     </div>
                     <button type="submit" value="Confirm" class="submit-btn">Confirm</button>

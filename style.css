@@ -112,7 +112,7 @@ input.cvc-input {
   width: 140px;
 }
 
-input ::placeholder {
+input::placeholder {
   color: var(--clr-neutral-100);
 }
 
@@ -151,41 +151,55 @@ input:invalid {
   border: 1px solid hsl(0, 100%, 66%);
 }
 
-span > p {
+label {
   margin-bottom: 7px;
   font-size: small;
   font-weight: bold;
   letter-spacing: 2px;
   color: var(--clr-neutral-900);
-}
-
-p {
   text-transform: uppercase;
 }
 
 .card-number-display,
 .card-holder-display,
 .exp-display,
-.cvc-display {
+.cvc-display,
+.card-month-display,
+.card-year-display,
+.card-slash-display {
   position: absolute;
   color: var(--clr-neutral-100);
 }
 
 .card-number-display {
+  letter-spacing: 1px;
   top: 10vmax;
   left: 3vmax;
   font-size: 17px;
 }
 
 .card-holder-display {
+  text-transform: uppercase;
   top: 16vmax;
   left: 3vmax;
   font-size: 10px;
 }
 
-.exp-display {
+.card-month-display {
   top: 16vmax;
-  left: 30vmax;
+  left: 29vmax;
+  font-size: 10px;
+}
+
+.card-year-display {
+  top: 16vmax;
+  left: 31.3vmax;
+  font-size: 10px;
+}
+
+.card-slash-display {
+  top: 16vmax;
+  left: 30.7vmax;
   font-size: 10px;
 }
 
@@ -226,6 +240,11 @@ button#continue {
   display: none;
 }
 
+p.error {
+  color: var(--clr-primary-red);
+  font-size: small;
+}
+
 @media screen and (min-width: 600px) {
   .container {
     flex-direction: inherit;
@@ -263,9 +282,21 @@ button#continue {
     font-size: 13px;
   }
 
-  .exp-display {
+  .card-month-display {
     top: 13vmax;
-    left: 25vmax;
+    left: 23vmax;
+    font-size: 13px;
+  }
+
+  .card-year-display {
+    top: 13vmax;
+    left: 25.3vmax;
+    font-size: 13px;
+  }
+
+  .card-slash-display {
+    top: 13vmax;
+    left: 24.7vmax;
     font-size: 13px;
   }
 
