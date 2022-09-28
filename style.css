@@ -136,6 +136,7 @@ button:hover {
 }
 
 input {
+  margin-top: 7px;
   height: 45px;
   border: 2px solid var(--clr-neutral-100);
   border-radius: 6px;
@@ -143,16 +144,17 @@ input {
 }
 
 input:focus {
-  border: 3px solid;
-  border-image: linear-gradient(hsl(249, 99%, 64%) 10%, hsl(278, 94%, 30%)) 1;
-}
-
-input:invalid {
-  border: 1px solid hsl(0, 100%, 66%);
+  padding: 0.5rem;
+  border: solid 1px transparent;
+  border-radius: 6px;
+  background-image: linear-gradient (rgb(100, 72, 254)),
+    linear-gradient(to right, hsl(278, 94%, 30%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 label {
-  margin-bottom: 7px;
+  margin-bottom: 8px;
   font-size: small;
   font-weight: bold;
   letter-spacing: 2px;
@@ -211,11 +213,11 @@ label {
 
 /* THANK YOU SECTION */
 .thank-you {
-  position: absolute;
-  right: 25%;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   gap: 20px;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -224,16 +226,19 @@ label {
 }
 .thank-you h2 {
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   font-weight: 500;
+  font-size: xx-large;
+  margin-top: 20px;
+  text-align: center;
 }
 .thank-you p {
   font-weight: 500;
-  color: hsl(279, 6%, 55%);
+  color: var(--clr-neutral-400);
 }
 button#continue {
   margin-top: 25px;
-  width: 350px;
+  width: 320px;
 }
 
 .hidden {
@@ -251,8 +256,10 @@ p.error {
   }
 
   .form-container {
+    width: 170px;
+    display: block;
+    margin: 0 auto;
     padding-top: 150px;
-    margin-left: 90px;
   }
 
   .front-card {
@@ -304,6 +311,11 @@ p.error {
     top: 7vmax;
     left: 24vmax;
     font-size: 13px;
+  }
+
+  .thank-you {
+    padding-top: 0px;
+    width: 320px;
   }
 }
 

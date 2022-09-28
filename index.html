@@ -30,31 +30,31 @@
         </div>
         <div class="card-form-container">
           <div class="form-container">
-            <form id="form" name="form">
+            <form id="my-form" name="form">
                 <div class="input-box">
                     <label>cardholder name</label>
-                    <input type="text" class="card-holder-input" id="card-name" placeholder="e.g. Jane Appleseed" oninput="displayName()">
+                    <input type="text" class="card-holder-input input" id="card-name" placeholder="e.g. Jane Appleseed" oninput="displayName()">
                     <p class="error" id="name-error"></p>
                 </div>
                 <div class="input-box">
                     <label>card number</label>
-                    <input type="text" class="card-number-input" id="card-number" placeholder="e.g. 1234 5678 9123 0000" oninput="displayNumber()">
+                    <input type="text" class="card-number-input input" id="card-number" placeholder="e.g. 1234 5678 9123 0000" oninput="displayNumber()">
                     <p class="error" id="num-error"></p>
                 </div>
                 <div class="flexbox">
                 <div class="input-box">
                     <label>exp.date(mm/yy)</label>
-                    <span><input type="text" class="month-input" id="card-month" placeholder="MM" name="month" oninput="displayMonth()"></span>
+                    <span><input type="text" class="month-input input" id="card-month" placeholder="MM" name="month" oninput="displayMonth()"></span>
                     <span><input type="text" class="year-input" id="card-year" placeholder="YY" name="year" oninput="displayYear()"></span>
                     <p class="error" id="expiry-error"></p>
                 </div>
                     <div class="input-box">
                         <label>cvc</label>
-                        <input type="text" class="cvc-input" id="card-cvc" placeholder="e.g. 123" name="cvc" oninput="displayCVC()">
-                        <p class="error" id="error-cvc"></p>          
+                        <input type="text" class="cvc-input input" id="card-cvc" placeholder="e.g. 123" name="cvc" oninput="displayCVC()">
+                        <p class="error" id="cvc-error"></p>          
                     </div>
                     </div>
-                    <button type="submit" value="Confirm" class="submit-btn">Confirm</button>
+                    <button id="button" type="submit" value="Confirm" class="submit-btn">Confirm</button>
             </form>
             <div id="thank-you" class="thank-you hidden">
               <img src="images/icon-complete.svg" alt="complete" />
