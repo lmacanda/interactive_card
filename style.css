@@ -127,7 +127,13 @@ button {
 }
 
 button:hover {
-  background-color: hsl(278, 68%, 11%, 0.8);
+  background-color: #fff;
+  background-image: linear-gradient(
+    to right,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
+  outline: none;
 }
 
 .input-box {
@@ -144,13 +150,14 @@ input {
 }
 
 input:focus {
-  padding: 0.5rem;
-  border: solid 1px transparent;
-  border-radius: 6px;
-  background-image: linear-gradient (rgb(100, 72, 254)),
-    linear-gradient(to right, hsl(278, 94%, 30%));
+  padding: 8px;
+  border: double 2px transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
   background-origin: border-box;
   background-clip: padding-box, border-box;
+  border-radius: 7px;
+  outline: none;
 }
 
 label {
